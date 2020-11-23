@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using AngleSharp;
 using AngleSharp.Dom;
+using CurrencyExchange.Constants;
+using CurrencyExchange.Contracts.Querys;
 using CurrencyExchange.Contracts.UseCases;
 using CurrencyExchange.Models;
 
@@ -15,61 +17,26 @@ namespace CurrencyExchange.UseCases
 {
     public class GetListCurrencyUseCase : IGetListCurrencyUseCase
     {
+        private readonly IUsdRatesQuery _usdRatesQuery;
         private readonly HttpClient client;
-        private string url = "https://finance.i.ua/";
-        public GetListCurrencyUseCase()
+        
+        public GetListCurrencyUseCase(IUsdRatesQuery UsdRatesQuery)
         {
+            _usdRatesQuery = UsdRatesQuery;
             client = new HttpClient();
         }
-        string source = null;
-        public async Task<List<Currency>> GetSourceByPageId()
-        {
-            var response = await client.GetAsync(url);
 
-            string source = null;
+        public async Task<List<Currency>> GetGetCurrencyListFromRemoteResourceAsync()
+        {
+            var response = await client.GetAsync(Urls.AddressStartPage);
             if (response != null && response.StatusCode == HttpStatusCode.OK)
             {
+               var sourceHtmlDocument = await _usdRatesQuery.GetSourceHtmlDocumentAsync();
+               var outputString = _usdRatesQuery.GetOutputStringAfterCssSelector(sourceHtmlDocument);
+               var getArrayFromOutput =_usdRatesQuery.ConvertOutputStringToArrayHtmlString(outputString);
+               var currencyList =await _usdRatesQuery.CreateCurrencyListAsync(getArrayFromOutput);
 
-
-                ////////////////////////////////////////////////////////////////////////////
-                //var config = Configuration.Default.WithDefaultLoader();
-                //var address = "https://finance.i.ua/";
-                //var document = await BrowsingContext.New(config).OpenAsync(address);
-
-
-
-                //var cellSelector = "bank_rates_usd";
-
-                //var cells = document.GetElementsByClassName(cellSelector);
-
-                //var titles = cells.Select(m => m.InnerHtml);
-
-
-                //foreach (var VARIABLE in titles)
-                //{
-                //    source += VARIABLE;
-                //}
-
-                //var massivStrok = source.Split("</tr>");
-
-                //Array.Resize(ref massivStrok, massivStrok.Length - 1);
-
-                //List<Currency> listModels = new List<Currency>();
-                //foreach (var VARIABLE in massivStrok)
-                //{
-
-                //    var context = BrowsingContext.New(Configuration.Default);
-                //    var document2 = await context.OpenAsync(req => req.Content(VARIABLE));
-                //    var emphasize = document2.QuerySelector("a");
-                //    var emphasize2 = document2.QuerySelectorAll("span");
-                //   var instance = new Currency();
-                //    instance.Name = emphasize.Text();
-                //    instance.Buy = emphasize2.First().TextContent;
-                //    instance.Sell = emphasize2.Last().TextContent;
-                //    listModels.Add(instance);
-                //}
-
-                //return listModels;
+               return currencyList;
             }
             else
             {

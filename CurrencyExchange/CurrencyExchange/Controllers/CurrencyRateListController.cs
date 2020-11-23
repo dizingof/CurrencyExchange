@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using CurrencyExchange.Contracts.UseCases;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 
 namespace CurrencyExchange.Controllers
 {
@@ -25,9 +26,9 @@ namespace CurrencyExchange.Controllers
         public IActionResult CreateWorkItem()
         {
 
-            var result = _getListCurrencyUseCase.GetSourceByPageId();
-            var first = result.Result.First().Name;
-            return Ok(first);
+            var result = _getListCurrencyUseCase.GetGetCurrencyListFromRemoteResourceAsync();
+            var json = JsonConvert.SerializeObject(result.Result);
+            return Ok(json);
         }
     }
 }

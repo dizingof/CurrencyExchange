@@ -5,14 +5,15 @@ using System.Threading.Tasks;
 using AngleSharp;
 using AngleSharp.Dom;
 using CurrencyExchange.Constants;
+using CurrencyExchange.Contracts.Querys;
 using CurrencyExchange.Models;
 
 namespace CurrencyExchange.DataAccess
 {
-    public class UsdRatesQuery
+    public class UsdRatesQuery : IUsdRatesQuery
     {
 
-        public async Task<IDocument> GetSourceHtmlDocument()
+        public async Task<IDocument> GetSourceHtmlDocumentAsync()
         {
             var config = Configuration.Default.WithDefaultLoader();
             var address = Urls.AddressStartPage;
@@ -41,7 +42,7 @@ namespace CurrencyExchange.DataAccess
             return massivStrok;
         }
 
-        public async Task<List<Currency>> CreateCurrencyList(string[] massivStrok)
+        public async Task<List<Currency>> CreateCurrencyListAsync(string[] massivStrok)
         {
             List<Currency> listCurrency = new List<Currency>();
 
