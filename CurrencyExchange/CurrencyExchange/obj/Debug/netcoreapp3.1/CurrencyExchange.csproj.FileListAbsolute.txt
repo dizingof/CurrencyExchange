@@ -18,3 +18,6 @@ C:\Users\Roman\Documents\CurrencyExchange\CurrencyExchange\CurrencyExchange\obj\
 C:\Users\Roman\Documents\CurrencyExchange\CurrencyExchange\CurrencyExchange\obj\Debug\netcoreapp3.1\CurrencyExchange.genruntimeconfig.cache
 C:\Users\Roman\Documents\CurrencyExchange\CurrencyExchange\CurrencyExchange\bin\Debug\netcoreapp3.1\AngleSharp.dll
 C:\Users\Roman\Documents\CurrencyExchange\CurrencyExchange\CurrencyExchange\obj\Debug\netcoreapp3.1\CurrencyExchange.csproj.CopyComplete
+C:\Users\Roman\Documents\CurrencyExchange\CurrencyExchange\CurrencyExchange\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\Roman\Documents\CurrencyExchange\CurrencyExchange\CurrencyExchange\obj\Debug\netcoreapp3.1\CurrencyExchange.csproj.CoreCompileInputs.cache
+C:\Users\Roman\Documents\CurrencyExchange\CurrencyExchange\CurrencyExchange\obj\Debug\netcoreapp3.1\CurrencyExchange.MvcApplicationPartsAssemblyInfo.cache
