@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using CurrencyExchange.Contracts.UseCases;
-using Microsoft.AspNetCore.Http;
+﻿using CurrencyExchange.Contracts.UseCases;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 
