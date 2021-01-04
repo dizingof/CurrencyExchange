@@ -23,6 +23,7 @@ namespace CurrencyExchange
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.AddCors();
             services.AddScoped<IGetListCurrencyUseCase, GetListCurrencyUseCase>();
             services.AddScoped<IUsdRatesQuery, UsdRatesQuery>();
         }
@@ -34,7 +35,7 @@ namespace CurrencyExchange
             {
                 app.UseDeveloperExceptionPage();
             }
-
+            app.UseCors(builder => builder.AllowAnyOrigin());
             app.UseHttpsRedirection();
 
             app.UseRouting();
