@@ -9,8 +9,8 @@ namespace CurrencyExchange.Contracts.Querys
 {
     public interface IUsdRatesQuery
     {
-        Task<IDocument> GetSourceHtmlDocumentAsync();
-        string GetOutputStringAfterCssSelector(IDocument document);
+        Task<IDocument> GetSourceHtmlDocumentAsync(string rateName);
+        string GetOutputStringAfterCssSelector(IDocument document, string selector);
         public string[] ConvertOutputStringToArrayHtmlString(string outputString);
         Task<List<Currency>> CreateCurrencyListAsync(string[] massivStrok);
 

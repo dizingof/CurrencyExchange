@@ -8,6 +8,6 @@ namespace CurrencyExchange.Contracts.UseCases
 {
     public interface IGetListCurrencyUseCase
     {
-        Task<List<Currency>> GetGetCurrencyListFromRemoteResourceAsync();
+        Task<List<Currency>> GetGetCurrencyListFromRemoteResourceAsync(string rateName, string selector);
     }
 }

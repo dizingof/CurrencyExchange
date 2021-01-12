@@ -13,17 +13,17 @@ namespace CurrencyExchange.DataAccess
     public class UsdRatesQuery : IUsdRatesQuery
     {
 
-        public async Task<IDocument> GetSourceHtmlDocumentAsync()
+        public async Task<IDocument> GetSourceHtmlDocumentAsync(string rateName)
         {
             var config = Configuration.Default.WithDefaultLoader();
-            var address = Urls.AddressStartPage;
+            var address = rateName;
             var document = await BrowsingContext.New(config).OpenAsync(address);
             return document;
         }
 
-        public string GetOutputStringAfterCssSelector(IDocument document)
+        public string GetOutputStringAfterCssSelector(IDocument document, string selector)
         {
-            var elements = document.GetElementsByClassName(Selectors.SelectorForUsdRatesSheets);
+            var elements = document.GetElementsByClassName(selector);
             var InnerHtmlPropertyElements = elements.Select(m => m.InnerHtml);
 
             string outputString = null;

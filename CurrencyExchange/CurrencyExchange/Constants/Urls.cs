@@ -7,6 +7,8 @@ namespace CurrencyExchange.Constants
 {
     public static class Urls
     {
-        public static string AddressStartPage = new string("https://finance.i.ua/");
+        public static string AddressUsdPage = new string("https://finance.i.ua/usd/");
+        public static string AddressEurPage = new string("https://finance.i.ua/eur/");
+        public static string AddressRubPage = new string("https://finance.i.ua/rub/");
     }
 }

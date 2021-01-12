@@ -26,13 +26,13 @@ namespace CurrencyExchange.UseCases
             client = new HttpClient();
         }
 
-        public async Task<List<Currency>> GetGetCurrencyListFromRemoteResourceAsync()
+        public async Task<List<Currency>> GetGetCurrencyListFromRemoteResourceAsync(string rateName, string selector)
         {
-            var response = await client.GetAsync(Urls.AddressStartPage);
+            var response = await client.GetAsync(rateName);
             if (response != null && response.StatusCode == HttpStatusCode.OK)
             {
-               var sourceHtmlDocument = await _usdRatesQuery.GetSourceHtmlDocumentAsync();
-               var outputString = _usdRatesQuery.GetOutputStringAfterCssSelector(sourceHtmlDocument);
+               var sourceHtmlDocument = await _usdRatesQuery.GetSourceHtmlDocumentAsync(rateName);
+               var outputString = _usdRatesQuery.GetOutputStringAfterCssSelector(sourceHtmlDocument, selector);
                var getArrayFromOutput =_usdRatesQuery.ConvertOutputStringToArrayHtmlString(outputString);
                var currencyList =await _usdRatesQuery.CreateCurrencyListAsync(getArrayFromOutput);
 
