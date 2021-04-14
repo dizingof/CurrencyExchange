@@ -4,6 +4,7 @@ using System.Linq;
 using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
+using CurrencyExchange.Constants;
 
 namespace CurrencyExchange.UseCases
 {
@@ -16,9 +17,9 @@ namespace CurrencyExchange.UseCases
             _httpClient = new HttpClient();
         }
 
-        public void GetWeatherByLocation(decimal lat, decimal lon)
+        public async Task GetWeatherByLocation(decimal lat, decimal lon)
         {
-
+            var response = await _httpClient.GetAsync(Urls.AddressWeatherApi);
         }
     }
 }
