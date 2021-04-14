@@ -18,17 +18,17 @@ namespace CurrencyExchange.UseCases
     public class GetListCurrencyUseCase : IGetListCurrencyUseCase
     {
         private readonly IUsdRatesQuery _usdRatesQuery;
-        private readonly HttpClient client;
+        private readonly HttpClient _httpClient;
         
         public GetListCurrencyUseCase(IUsdRatesQuery UsdRatesQuery)
         {
             _usdRatesQuery = UsdRatesQuery;
-            client = new HttpClient();
+            _httpClient = new HttpClient();
         }
 
         public async Task<List<Currency>> GetGetCurrencyListFromRemoteResourceAsync(string rateName, string selector)
         {
-            var response = await client.GetAsync(rateName);
+            var response = await _httpClient.GetAsync(rateName);
             if (response != null && response.StatusCode == HttpStatusCode.OK)
             {
                var sourceHtmlDocument = await _usdRatesQuery.GetSourceHtmlDocumentAsync(rateName);
