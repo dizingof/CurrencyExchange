@@ -1,14 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "/r/4LEEhQ0RE0+3xR+AZN+waPqbZ7OidkefVoSYkur1P3gnuUcST3DI3SF38FCpQ6uEFqamvpwdE40vgoSUghg==",
+  "dgSpecHash": "aKdbFr3i0H0kturYG/wpnpYJVhg4frmKQlTNsbPu5Mf3SJob1IVK+q9DrKYlUYHnNnlYTkqqiX8qTQ6Iz76XCQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Roman\\Documents\\CurrencyExchange\\CurrencyExchange\\CurrencyExchange\\CurrencyExchange.csproj",
+  "projectFilePath": "C:\\Users\\roman\\Documents\\CurrencyExchange\\CurrencyExchange\\CurrencyExchange\\CurrencyExchange.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Roman\\.nuget\\packages\\anglesharp\\0.14.0\\anglesharp.0.14.0.nupkg.sha512",
-    "C:\\Users\\Roman\\.nuget\\packages\\microsoft.netcore.platforms\\2.0.0\\microsoft.netcore.platforms.2.0.0.nupkg.sha512",
-    "C:\\Users\\Roman\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
-    "C:\\Users\\Roman\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.0\\system.runtime.compilerservices.unsafe.4.5.0.nupkg.sha512",
-    "C:\\Users\\Roman\\.nuget\\packages\\system.text.encoding.codepages\\4.5.0\\system.text.encoding.codepages.4.5.0.nupkg.sha512"
+    "C:\\Users\\roman\\.nuget\\packages\\anglesharp\\0.14.0\\anglesharp.0.14.0.nupkg.sha512",
+    "C:\\Users\\roman\\.nuget\\packages\\microsoft.netcore.platforms\\2.0.0\\microsoft.netcore.platforms.2.0.0.nupkg.sha512",
+    "C:\\Users\\roman\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
+    "C:\\Users\\roman\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.0\\system.runtime.compilerservices.unsafe.4.5.0.nupkg.sha512",
+    "C:\\Users\\roman\\.nuget\\packages\\system.text.encoding.codepages\\4.5.0\\system.text.encoding.codepages.4.5.0.nupkg.sha512"
   ],
   "logs": []
 }

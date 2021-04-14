@@ -215,19 +215,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Roman\\.nuget\\packages\\": {}
+    "C:\\Users\\roman\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Roman\\Documents\\CurrencyExchange\\CurrencyExchange\\CurrencyExchange\\CurrencyExchange.csproj",
+      "projectUniqueName": "C:\\Users\\roman\\Documents\\CurrencyExchange\\CurrencyExchange\\CurrencyExchange\\CurrencyExchange.csproj",
       "projectName": "CurrencyExchange",
-      "projectPath": "C:\\Users\\Roman\\Documents\\CurrencyExchange\\CurrencyExchange\\CurrencyExchange\\CurrencyExchange.csproj",
-      "packagesPath": "C:\\Users\\Roman\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Roman\\Documents\\CurrencyExchange\\CurrencyExchange\\CurrencyExchange\\obj\\",
+      "projectPath": "C:\\Users\\roman\\Documents\\CurrencyExchange\\CurrencyExchange\\CurrencyExchange\\CurrencyExchange.csproj",
+      "packagesPath": "C:\\Users\\roman\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\roman\\Documents\\CurrencyExchange\\CurrencyExchange\\CurrencyExchange\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Roman\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\roman\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -239,6 +239,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "projectReferences": {}
         }
       },
@@ -250,6 +251,7 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "AngleSharp": {
             "target": "Package",
@@ -278,7 +280,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }
