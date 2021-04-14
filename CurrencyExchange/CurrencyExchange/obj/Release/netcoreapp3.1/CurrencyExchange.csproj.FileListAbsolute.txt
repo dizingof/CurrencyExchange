@@ -1,6 +1,5 @@
 C:\Users\Roman\Documents\CurrencyExchange\CurrencyExchange\CurrencyExchange\bin\Release\netcoreapp3.1\appsettings.Development.json
 C:\Users\Roman\Documents\CurrencyExchange\CurrencyExchange\CurrencyExchange\bin\Release\netcoreapp3.1\appsettings.json
-C:\Users\Roman\Documents\CurrencyExchange\CurrencyExchange\CurrencyExchange\bin\Release\netcoreapp3.1\Properties\launchSettings.json
 C:\Users\Roman\Documents\CurrencyExchange\CurrencyExchange\CurrencyExchange\bin\Release\netcoreapp3.1\CurrencyExchange.exe
 C:\Users\Roman\Documents\CurrencyExchange\CurrencyExchange\CurrencyExchange\bin\Release\netcoreapp3.1\CurrencyExchange.deps.json
 C:\Users\Roman\Documents\CurrencyExchange\CurrencyExchange\CurrencyExchange\bin\Release\netcoreapp3.1\CurrencyExchange.runtimeconfig.json
@@ -21,3 +20,4 @@ C:\Users\Roman\Documents\CurrencyExchange\CurrencyExchange\CurrencyExchange\obj\
 C:\Users\Roman\Documents\CurrencyExchange\CurrencyExchange\CurrencyExchange\obj\Release\netcoreapp3.1\CurrencyExchange.dll
 C:\Users\Roman\Documents\CurrencyExchange\CurrencyExchange\CurrencyExchange\obj\Release\netcoreapp3.1\CurrencyExchange.pdb
 C:\Users\Roman\Documents\CurrencyExchange\CurrencyExchange\CurrencyExchange\obj\Release\netcoreapp3.1\CurrencyExchange.genruntimeconfig.cache
+C:\Users\roman\Documents\CurrencyExchange\CurrencyExchange\CurrencyExchange\obj\Release\netcoreapp3.1\scopedcss\bundle\CurrencyExchange.styles.css
