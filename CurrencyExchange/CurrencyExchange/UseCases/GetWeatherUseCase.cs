@@ -22,7 +22,7 @@ namespace CurrencyExchange.UseCases
             var apiWeatherToken = _configuration["WeatherApiToken:Key"];
             var urlWeatherApi = string.Format(Urls.AddressWeatherApi, lat, lon, apiWeatherToken);
             var response = await _httpClient.GetAsync(urlWeatherApi);
-           var stringContent = response.Content.ReadAsStringAsync().Result;
+            var stringContent = response.Content.ReadAsStringAsync().Result;
 
 
         }
