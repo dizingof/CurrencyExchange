@@ -25,6 +25,7 @@ namespace CurrencyExchange
             services.AddControllers();
             services.AddCors();
             services.AddScoped<IGetListCurrencyUseCase, GetListCurrencyUseCase>();
+            services.AddScoped<IGetWeatherUseCase, GetWeatherUseCase>();
             services.AddScoped<IUsdRatesQuery, UsdRatesQuery>();
         }
 

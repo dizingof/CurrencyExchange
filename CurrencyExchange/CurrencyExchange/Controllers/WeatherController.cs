@@ -1,9 +1,7 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using CurrencyExchange.Constants;
+using CurrencyExchange.Contracts.UseCases;
 using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using Newtonsoft.Json;
 
 namespace CurrencyExchange.Controllers
 {
@@ -11,5 +9,20 @@ namespace CurrencyExchange.Controllers
     [ApiController]
     public class WeatherController : ControllerBase
     {
+        private readonly IGetWeatherUseCase _getWeatherUseCase;
+
+        public WeatherController(IGetWeatherUseCase getWeatherUseCase)
+        {
+            _getWeatherUseCase = getWeatherUseCase; 
+        }
+
+        [HttpGet]
+        [Route("GetWeatherByLocation")]
+        public IActionResult GetWeatherByLocation(decimal lat, decimal lon)
+        {
+            var result = _getWeatherUseCase.GetWeatherByLocation(lat, lon);
+            
+            return Ok(result);
+        }
     }
 }

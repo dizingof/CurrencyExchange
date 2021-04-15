@@ -19,7 +19,7 @@ namespace CurrencyExchange.Controllers
 
         [HttpGet]
         [Route("GetCurrencyUsdList")]
-        public IActionResult CreateWorkItemUsd()
+        public IActionResult GetCurrencyUsdList()
         {
             var result = _getListCurrencyUseCase.GetGetCurrencyListFromRemoteResourceAsync(Urls.AddressUsdPage, Selectors.SelectorForUsdRatesSheets);
             var json = JsonConvert.SerializeObject(result.Result);
@@ -28,7 +28,7 @@ namespace CurrencyExchange.Controllers
 
         [HttpGet]
         [Route("GetCurrencyEurList")]
-        public IActionResult CreateWorkItemEur()
+        public IActionResult GetCurrencyEurList()
         {
             var result = _getListCurrencyUseCase.GetGetCurrencyListFromRemoteResourceAsync(Urls.AddressEurPage, Selectors.SelectorForEurRatesSheets);
             var json = JsonConvert.SerializeObject(result.Result);
@@ -37,7 +37,7 @@ namespace CurrencyExchange.Controllers
 
         [HttpGet]
         [Route("GetCurrencyRubList")]
-        public IActionResult CreateWorkItemRub()
+        public IActionResult GetCurrencyRubList()
         {
             var result = _getListCurrencyUseCase.GetGetCurrencyListFromRemoteResourceAsync(Urls.AddressRubPage, Selectors.SelectorForRubRatesSheets);
             var json = JsonConvert.SerializeObject(result.Result);
