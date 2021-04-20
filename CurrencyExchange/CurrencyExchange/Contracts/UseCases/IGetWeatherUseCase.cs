@@ -7,6 +7,6 @@ namespace CurrencyExchange.Contracts.UseCases
 {
     public interface IGetWeatherUseCase
     {
-        Task GetWeatherByLocation(decimal lat, decimal lon);
+        Task<string> GetWeatherByLocation(decimal lat, decimal lon);
     }
 }

@@ -17,13 +17,13 @@ namespace CurrencyExchange.UseCases
             _configuration = configuration;
         }
 
-        public async Task GetWeatherByLocation(decimal lat, decimal lon)
+        public async Task<string> GetWeatherByLocation(decimal lat, decimal lon)
         {
             var apiWeatherToken = _configuration["WeatherApiToken:Key"];
             var urlWeatherApi = string.Format(Urls.AddressWeatherApi, lat, lon, apiWeatherToken);
             var response = await _httpClient.GetAsync(urlWeatherApi);
             var stringContent = response.Content.ReadAsStringAsync().Result;
-
+            return stringContent;
 
         }
     }

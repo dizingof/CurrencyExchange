@@ -22,7 +22,7 @@ namespace CurrencyExchange.Controllers
         {
             var result = _getWeatherUseCase.GetWeatherByLocation(lat, lon);
             
-            return Ok(result);
+            return Ok(result.Result);
         }
     }
 }
