@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using CurrencyExchange.Models.UIModels;
 using System.Threading.Tasks;
 
 namespace CurrencyExchange.Contracts.UseCases
 {
     public interface IGetWeatherUseCase
     {
-        Task<string> GetWeatherByLocation(decimal lat, decimal lon);
+        Task<WeatherUi> GetWeatherByLocation(double lat, double lon);
     }
 }

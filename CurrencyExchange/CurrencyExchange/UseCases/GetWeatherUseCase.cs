@@ -1,8 +1,12 @@
 ﻿using CurrencyExchange.Constants;
+using CurrencyExchange.Contracts.UseCases;
+using CurrencyExchange.Models;
+using Microsoft.Extensions.Configuration;
+using Newtonsoft.Json;
 using System.Net.Http;
 using System.Threading.Tasks;
-using CurrencyExchange.Contracts.UseCases;
-using Microsoft.Extensions.Configuration;
+using CurrencyExchange.Models.UIModels;
+using Microsoft.AspNetCore.Mvc;
 
 namespace CurrencyExchange.UseCases
 {
@@ -17,14 +21,14 @@ namespace CurrencyExchange.UseCases
             _configuration = configuration;
         }
 
-        public async Task<string> GetWeatherByLocation(decimal lat, decimal lon)
+        public async Task<WeatherUi> GetWeatherByLocation(double lat, double lon)
         {
             var apiWeatherToken = _configuration["WeatherApiToken:Key"];
             var urlWeatherApi = string.Format(Urls.AddressWeatherApi, lat, lon, apiWeatherToken);
             var response = await _httpClient.GetAsync(urlWeatherApi);
             var stringContent = response.Content.ReadAsStringAsync().Result;
-            return stringContent;
-
+            var weather = JsonConvert.DeserializeObject<WeatherFull>(stringContent);
+            return new WeatherUi { Location = weather.name, Temperature = weather.main.temp };
         }
     }
 }

@@ -1,7 +1,5 @@
-﻿using CurrencyExchange.Constants;
-using CurrencyExchange.Contracts.UseCases;
+﻿using CurrencyExchange.Contracts.UseCases;
 using Microsoft.AspNetCore.Mvc;
-using Newtonsoft.Json;
 
 namespace CurrencyExchange.Controllers
 {
@@ -18,7 +16,7 @@ namespace CurrencyExchange.Controllers
 
         [HttpGet]
         [Route("GetWeatherByLocation")]
-        public IActionResult GetWeatherByLocation(decimal lat, decimal lon)
+        public IActionResult GetWeatherByLocation(double lat, double lon)
         {
             var result = _getWeatherUseCase.GetWeatherByLocation(lat, lon);
             
