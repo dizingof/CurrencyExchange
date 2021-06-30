@@ -1,12 +1,11 @@
 ﻿using CurrencyExchange.Constants;
 using CurrencyExchange.Contracts.UseCases;
 using CurrencyExchange.Models;
+using CurrencyExchange.Models.UIModels;
 using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
 using System.Net.Http;
 using System.Threading.Tasks;
-using CurrencyExchange.Models.UIModels;
-using Microsoft.AspNetCore.Mvc;
 
 namespace CurrencyExchange.UseCases
 {
