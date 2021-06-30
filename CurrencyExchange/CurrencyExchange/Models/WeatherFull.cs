@@ -48,8 +48,9 @@ namespace CurrencyExchange.Models
 
     public class Wind
     {
-        public int speed { get; set; }
+        public double speed { get; set; }
         public int deg { get; set; }
+        public int gust { get; set; }
     }
 
     public class Clouds
