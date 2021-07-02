@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "aKdbFr3i0H0kturYG/wpnpYJVhg4frmKQlTNsbPu5Mf3SJob1IVK+q9DrKYlUYHnNnlYTkqqiX8qTQ6Iz76XCQ==",
+  "dgSpecHash": "wSZkgy7ALKZ8H8jdCpqQ2nvQSV+ZSvmMwZJI+jGJYAEthnVROj3M8DoDKjKRAaP5W/AgxgwTm+tnrs6Xj2v1Og==",
   "success": true,
   "projectFilePath": "C:\\Users\\roman\\Documents\\CurrencyExchange\\CurrencyExchange\\CurrencyExchange\\CurrencyExchange.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\roman\\.nuget\\packages\\anglesharp\\0.14.0\\anglesharp.0.14.0.nupkg.sha512",
+    "C:\\Users\\roman\\.nuget\\packages\\microsoft.aspnetcore.authentication.facebook\\3.1.16\\microsoft.aspnetcore.authentication.facebook.3.1.16.nupkg.sha512",
     "C:\\Users\\roman\\.nuget\\packages\\microsoft.netcore.platforms\\2.0.0\\microsoft.netcore.platforms.2.0.0.nupkg.sha512",
     "C:\\Users\\roman\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
     "C:\\Users\\roman\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.0\\system.runtime.compilerservices.unsafe.4.5.0.nupkg.sha512",

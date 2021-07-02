@@ -21,3 +21,4 @@ C:\Users\Roman\Documents\CurrencyExchange\CurrencyExchange\CurrencyExchange\bin\
 C:\Users\Roman\Documents\CurrencyExchange\CurrencyExchange\CurrencyExchange\obj\Debug\netcoreapp3.1\CurrencyExchange.csproj.CoreCompileInputs.cache
 C:\Users\Roman\Documents\CurrencyExchange\CurrencyExchange\CurrencyExchange\obj\Debug\netcoreapp3.1\CurrencyExchange.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\roman\Documents\CurrencyExchange\CurrencyExchange\CurrencyExchange\obj\Debug\netcoreapp3.1\scopedcss\bundle\CurrencyExchange.styles.css
+C:\Users\roman\Documents\CurrencyExchange\CurrencyExchange\CurrencyExchange\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.Facebook.dll

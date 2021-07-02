@@ -14,6 +14,18 @@
           "lib/netstandard2.0/AngleSharp.dll": {}
         }
       },
+      "Microsoft.AspNetCore.Authentication.Facebook/3.1.16": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp3.1/Microsoft.AspNetCore.Authentication.Facebook.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/Microsoft.AspNetCore.Authentication.Facebook.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
       "Microsoft.NETCore.Platforms/2.0.0": {
         "type": "package",
         "compile": {
@@ -82,6 +94,21 @@
         "lib/netstandard1.3/AngleSharp.xml",
         "lib/netstandard2.0/AngleSharp.dll",
         "lib/netstandard2.0/AngleSharp.xml"
+      ]
+    },
+    "Microsoft.AspNetCore.Authentication.Facebook/3.1.16": {
+      "sha512": "jt3VAEahCNnx3cExP74PlVH6pzqlFkua60uuL5fpb7MR5KwaA8cRoiELTYkz0jWFTL5cGQ43+sGNd6YdBH+G8A==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.authentication.facebook/3.1.16",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/netcoreapp3.1/Microsoft.AspNetCore.Authentication.Facebook.dll",
+        "lib/netcoreapp3.1/Microsoft.AspNetCore.Authentication.Facebook.xml",
+        "microsoft.aspnetcore.authentication.facebook.3.1.16.nupkg.sha512",
+        "microsoft.aspnetcore.authentication.facebook.nuspec"
       ]
     },
     "Microsoft.NETCore.Platforms/2.0.0": {
@@ -211,6 +238,7 @@
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
       "AngleSharp >= 0.14.0",
+      "Microsoft.AspNetCore.Authentication.Facebook >= 3.1.16",
       "Newtonsoft.Json >= 12.0.3"
     ]
   },
@@ -256,6 +284,10 @@
           "AngleSharp": {
             "target": "Package",
             "version": "[0.14.0, )"
+          },
+          "Microsoft.AspNetCore.Authentication.Facebook": {
+            "target": "Package",
+            "version": "[3.1.16, )"
           },
           "Newtonsoft.Json": {
             "target": "Package",

@@ -2,11 +2,14 @@ using CurrencyExchange.Contracts.Querys;
 using CurrencyExchange.Contracts.UseCases;
 using CurrencyExchange.DataAccess;
 using CurrencyExchange.UseCases;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication.Facebook;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+
 
 namespace CurrencyExchange
 {
@@ -27,6 +30,18 @@ namespace CurrencyExchange
             services.AddScoped<IGetListCurrencyUseCase, GetListCurrencyUseCase>();
             services.AddScoped<IGetWeatherUseCase, GetWeatherUseCase>();
             services.AddScoped<IUsdRatesQuery, UsdRatesQuery>();
+
+            services.AddAuthentication(options =>
+                {
+                    options.DefaultChallengeScheme = FacebookDefaults.AuthenticationScheme;
+                    options.DefaultSignInScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+                    options.DefaultAuthenticateScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+                })
+                .AddFacebook(options =>
+            {
+                options.AppId = Configuration["FacebookAppId:AppId"];
+                options.AppSecret = Configuration["FacebookAppSecret:AppSecret"];
+            }).AddCookie();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
