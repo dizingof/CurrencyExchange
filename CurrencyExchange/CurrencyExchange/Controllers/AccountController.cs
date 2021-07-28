@@ -24,6 +24,7 @@ namespace CurrencyExchange.Controllers
         [Route("facebook-response")]
         public async Task<IActionResult> FacebookResponse()
         {
+            
             var result = await HttpContext.AuthenticateAsync(CookieAuthenticationDefaults.AuthenticationScheme);
 
             var claims = result.Principal.Identities.ToList().Select(x => x.Claims.Select(x=>x.Value));

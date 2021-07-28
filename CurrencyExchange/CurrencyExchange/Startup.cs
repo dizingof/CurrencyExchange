@@ -40,6 +40,9 @@ namespace CurrencyExchange
             {
                 facebookOptions.AppId = Configuration["FacebookAppId:AppId"];
                 facebookOptions.AppSecret = Configuration["FacebookAppSecret:AppSecret"];
+                facebookOptions.Scope.Add("email");
+                facebookOptions.Scope.Add("user_location");
+                facebookOptions.Scope.Add("user_birthday");
             });
         }
 
