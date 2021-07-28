@@ -26,14 +26,7 @@ namespace CurrencyExchange.Controllers
         {
             var result = await HttpContext.AuthenticateAsync(CookieAuthenticationDefaults.AuthenticationScheme);
 
-            var claims = result.Principal.Identities
-                .FirstOrDefault().Claims.Select(claim => new
-                {
-                    claim.Issuer,
-                    claim.OriginalIssuer,
-                    claim.Type,
-                    claim.Value
-                });
+            var claims = result.Principal.Identities.ToList().Select(x => x.Claims.Select(x=>x.Value));
 
             return Ok(claims);
         }
