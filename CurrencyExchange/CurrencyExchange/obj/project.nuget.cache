@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "6yz8K6D5Z0ZSQZEEZLWJLr2PCJJi+M+liDgzdjCBNfmpzo0yZ/50Vk3Nag0ZR1KQ5MzUkxbW2dOJ9kKIgWu7zA==",
+  "dgSpecHash": "KZGm6apCi9sTnBU53/u0kDctKAyrORCY3RG4JqMnBjVc/oB146iNsC4Jz9QfhyNw9Z46etHlvTndcD3jKgp4yg==",
   "success": true,
   "projectFilePath": "C:\\Users\\roman.nepomniashchyi\\Documents\\CurrencyExchange\\CurrencyExchange\\CurrencyExchange\\CurrencyExchange.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\roman.nepomniashchyi\\.nuget\\packages\\anglesharp\\0.14.0\\anglesharp.0.14.0.nupkg.sha512",
     "C:\\Users\\roman.nepomniashchyi\\.nuget\\packages\\microsoft.aspnetcore.authentication.facebook\\3.1.17\\microsoft.aspnetcore.authentication.facebook.3.1.17.nupkg.sha512",
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.platforms\\2.0.0\\microsoft.netcore.platforms.2.0.0.nupkg.sha512",
+    "C:\\Users\\roman.nepomniashchyi\\.nuget\\packages\\microsoft.netcore.platforms\\2.0.0\\microsoft.netcore.platforms.2.0.0.nupkg.sha512",
     "C:\\Users\\roman.nepomniashchyi\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
     "C:\\Users\\roman.nepomniashchyi\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.0\\system.runtime.compilerservices.unsafe.4.5.0.nupkg.sha512",
     "C:\\Users\\roman.nepomniashchyi\\.nuget\\packages\\system.text.encoding.codepages\\4.5.0\\system.text.encoding.codepages.4.5.0.nupkg.sha512"
