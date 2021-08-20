@@ -49,3 +49,8 @@ C:\Users\roman.nepomniashchyi\Documents\CurrencyExchange\CurrencyExchange\Curren
 C:\Users\roman.nepomniashchyi\Documents\CurrencyExchange\CurrencyExchange\CurrencyExchange\obj\Debug\netcoreapp3.1\CurrencyExchange.dll
 C:\Users\roman.nepomniashchyi\Documents\CurrencyExchange\CurrencyExchange\CurrencyExchange\obj\Debug\netcoreapp3.1\CurrencyExchange.pdb
 C:\Users\roman.nepomniashchyi\Documents\CurrencyExchange\CurrencyExchange\CurrencyExchange\obj\Debug\netcoreapp3.1\CurrencyExchange.genruntimeconfig.cache
+C:\Users\roman\Documents\CurrencyExchange\CurrencyExchange\CurrencyExchange\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
+C:\Users\roman\Documents\CurrencyExchange\CurrencyExchange\CurrencyExchange\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\roman\Documents\CurrencyExchange\CurrencyExchange\CurrencyExchange\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\roman\Documents\CurrencyExchange\CurrencyExchange\CurrencyExchange\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\roman\Documents\CurrencyExchange\CurrencyExchange\CurrencyExchange\obj\Debug\netcoreapp3.1\CurrencyExchange.MvcApplicationPartsAssemblyInfo.cs
