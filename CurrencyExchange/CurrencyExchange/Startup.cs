@@ -4,6 +4,7 @@ using CurrencyExchange.DataAccess;
 using CurrencyExchange.UseCases;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -27,6 +28,12 @@ namespace CurrencyExchange
             services.AddScoped<IGetListCurrencyUseCase, GetListCurrencyUseCase>();
             services.AddScoped<IGetWeatherUseCase, GetWeatherUseCase>();
             services.AddScoped<IUsdRatesQuery, UsdRatesQuery>();
+            services.AddAuthentication().AddFacebook(o =>
+            {
+                o.AppId = Configuration["FacebookAppId:AppId"];
+                o.AppSecret = Configuration["FacebookAppSecret:AppSecret"];
+            });
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

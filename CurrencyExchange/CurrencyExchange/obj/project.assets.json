@@ -14,6 +14,18 @@
           "lib/netstandard2.0/AngleSharp.dll": {}
         }
       },
+      "Microsoft.AspNetCore.Authentication.Facebook/3.1.18": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp3.1/Microsoft.AspNetCore.Authentication.Facebook.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/Microsoft.AspNetCore.Authentication.Facebook.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
       "Microsoft.NETCore.Platforms/2.0.0": {
         "type": "package",
         "compile": {
@@ -82,6 +94,21 @@
         "lib/netstandard1.3/AngleSharp.xml",
         "lib/netstandard2.0/AngleSharp.dll",
         "lib/netstandard2.0/AngleSharp.xml"
+      ]
+    },
+    "Microsoft.AspNetCore.Authentication.Facebook/3.1.18": {
+      "sha512": "f/betFmZSxbKQ+JBYiRCNWKPiOxJJn4CNdI9Uye/0iAIqf/NBIfYNbyUn8hH1MSaCpgpnyUCj+Vcnw6OMevOLQ==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.authentication.facebook/3.1.18",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/netcoreapp3.1/Microsoft.AspNetCore.Authentication.Facebook.dll",
+        "lib/netcoreapp3.1/Microsoft.AspNetCore.Authentication.Facebook.xml",
+        "microsoft.aspnetcore.authentication.facebook.3.1.18.nupkg.sha512",
+        "microsoft.aspnetcore.authentication.facebook.nuspec"
       ]
     },
     "Microsoft.NETCore.Platforms/2.0.0": {
@@ -211,23 +238,24 @@
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
       "AngleSharp >= 0.14.0",
+      "Microsoft.AspNetCore.Authentication.Facebook >= 3.1.18",
       "Newtonsoft.Json >= 12.0.3"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\roman\\.nuget\\packages\\": {}
+    "C:\\Users\\roman.nepomniashchyi\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\roman\\Documents\\CurrencyExchange\\CurrencyExchange\\CurrencyExchange\\CurrencyExchange.csproj",
+      "projectUniqueName": "C:\\Users\\roman.nepomniashchyi\\Documents\\CurrencyExchange\\CurrencyExchange\\CurrencyExchange\\CurrencyExchange.csproj",
       "projectName": "CurrencyExchange",
-      "projectPath": "C:\\Users\\roman\\Documents\\CurrencyExchange\\CurrencyExchange\\CurrencyExchange\\CurrencyExchange.csproj",
-      "packagesPath": "C:\\Users\\roman\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\roman\\Documents\\CurrencyExchange\\CurrencyExchange\\CurrencyExchange\\obj\\",
+      "projectPath": "C:\\Users\\roman.nepomniashchyi\\Documents\\CurrencyExchange\\CurrencyExchange\\CurrencyExchange\\CurrencyExchange.csproj",
+      "packagesPath": "C:\\Users\\roman.nepomniashchyi\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\roman.nepomniashchyi\\Documents\\CurrencyExchange\\CurrencyExchange\\CurrencyExchange\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\roman\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\roman.nepomniashchyi\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -257,6 +285,10 @@
             "target": "Package",
             "version": "[0.14.0, )"
           },
+          "Microsoft.AspNetCore.Authentication.Facebook": {
+            "target": "Package",
+            "version": "[3.1.18, )"
+          },
           "Newtonsoft.Json": {
             "target": "Package",
             "version": "[12.0.3, )"
@@ -280,7 +312,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.302\\RuntimeIdentifierGraph.json"
       }
     }
   }
