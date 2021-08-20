@@ -22,11 +22,13 @@ namespace CurrencyExchange
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+
             services.AddControllers();
             services.AddCors();
             services.AddScoped<IGetListCurrencyUseCase, GetListCurrencyUseCase>();
             services.AddScoped<IGetWeatherUseCase, GetWeatherUseCase>();
             services.AddScoped<IUsdRatesQuery, UsdRatesQuery>();
+            services.AddSwaggerGen();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -36,6 +38,12 @@ namespace CurrencyExchange
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseSwagger();
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "MyAPI");
+            });
             app.UseCors(builder => builder.AllowAnyOrigin());
             app.UseHttpsRedirection();
 
