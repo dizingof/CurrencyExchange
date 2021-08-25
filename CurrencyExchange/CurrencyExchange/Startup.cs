@@ -28,6 +28,8 @@ namespace CurrencyExchange
             services.AddScoped<IGetListCurrencyUseCase, GetListCurrencyUseCase>();
             services.AddScoped<IGetWeatherUseCase, GetWeatherUseCase>();
             services.AddScoped<IUsdRatesQuery, UsdRatesQuery>();
+            services.AddScoped<IGetListFuelUseCase, GetListFuelUseCase>();
+            services.AddScoped<IFuelRatesQuery, FuelRatesQuery>();
             services.AddSwaggerGen();
         }
 

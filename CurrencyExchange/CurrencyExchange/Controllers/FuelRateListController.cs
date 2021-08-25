@@ -21,9 +21,8 @@ namespace CurrencyExchange.Controllers
         [Route("GetFuelList")]
         public IActionResult GetCurrencyUsdList()
         {
-            var result = _getListFuelUseCase.GetGetCurrencyListFromRemoteResourceAsync(Urls.AddressUsdPage, Selectors.SelectorForUsdRatesSheets);
-            var json = JsonConvert.SerializeObject(result.Result);
-            return Ok(json);
+            var result = _getListFuelUseCase.GetGetCurrencyListFromRemoteResourceAsync(Urls.AddressFuelPage, Selectors.SelectorForFuelRatesSheets);
+            return Ok(result.Result);
         }
     }
 }

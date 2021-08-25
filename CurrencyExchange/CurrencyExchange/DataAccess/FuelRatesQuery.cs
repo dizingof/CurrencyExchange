@@ -1,17 +1,16 @@
-﻿using AngleSharp;
-using AngleSharp.Dom;
-using CurrencyExchange.Contracts.Querys;
-using CurrencyExchange.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AngleSharp;
+using AngleSharp.Dom;
+using CurrencyExchange.Contracts.Querys;
+using CurrencyExchange.Models;
 
 namespace CurrencyExchange.DataAccess
 {
-    public class UsdRatesQuery : IUsdRatesQuery
+    public class FuelRatesQuery : IFuelRatesQuery
     {
-
         public async Task<IDocument> GetSourceHtmlDocumentAsync(string rateName)
         {
             var config = Configuration.Default.WithDefaultLoader();
@@ -31,7 +30,7 @@ namespace CurrencyExchange.DataAccess
                 outputString += VARIABLE;
             }
 
-            return outputString; 
+            return outputString;
         }
 
         public string[] ConvertOutputStringToArrayHtmlString(string outputString)
@@ -41,25 +40,31 @@ namespace CurrencyExchange.DataAccess
             return massivStrok;
         }
 
-        public async Task<List<Currency>> CreateCurrencyListAsync(string[] massivStrok)
+        public async Task<List<Fuel>> CreateCurrencyListAsync(string[] massivStrok)
         {
-            List<Currency> listCurrency = new List<Currency>();
+            List<Fuel> listCurrency = new List<Fuel>();
 
             foreach (var VARIABLE in massivStrok)
             {
                 var document = await BrowsingContext.New(Configuration.Default).OpenAsync(req => req.Content(VARIABLE));
                 var valueTagA = document.QuerySelector("a");
                 var listValueTagSpan = document.QuerySelectorAll("span");
-                var instanceCurrency = new Currency();
-                instanceCurrency.Name = valueTagA.Text();
-                instanceCurrency.Buy = listValueTagSpan.First().TextContent;
-                instanceCurrency.Sell = listValueTagSpan.Last().TextContent;
-                listCurrency.Add(instanceCurrency);
+                if (valueTagA != null)
+                {
+                    var instanceCurrency = new Fuel
+                    {
+                        Name = valueTagA.Text(),
+                        A92 = listValueTagSpan.First().TextContent,
+                        A95 = listValueTagSpan[1].TextContent,
+                        Dt = listValueTagSpan.Last().TextContent
+                    };
+                    listCurrency.Add(instanceCurrency);
+                }
+
             }
 
             return listCurrency;
         }
-
 
     }
 }
