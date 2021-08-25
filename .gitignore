@@ -8,7 +8,6 @@ obj/
 *.user
 *.userosscache
 *.sln.docstates
-*.cache
 
 # ReSharper
 _ReSharper*/

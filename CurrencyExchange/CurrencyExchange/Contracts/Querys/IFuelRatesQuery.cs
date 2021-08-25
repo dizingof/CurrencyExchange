@@ -5,11 +5,11 @@ using System.Threading.Tasks;
 
 namespace CurrencyExchange.Contracts.Querys
 {
-    public interface IUsdRatesQuery
+    public interface IFuelRatesQuery
     {
         Task<IDocument> GetSourceHtmlDocumentAsync(string rateName);
         string GetOutputStringAfterCssSelector(IDocument document, string selector);
         public string[] ConvertOutputStringToArrayHtmlString(string outputString);
-        Task<List<Currency>> CreateCurrencyListAsync(string[] massivStrok);
+        Task<List<Fuel>> CreateCurrencyListAsync(string[] massivStrok);
     }
 }

@@ -11,5 +11,7 @@ namespace CurrencyExchange.Constants
         public static string SelectorForEurRatesSheets = new string("bank_rates_eur");
         public static string SelectorForRubRatesSheets = new string("bank_rates_rub");
 
+        public static string SelectorForFuelRatesSheets = new string("data_container");
+
     }
 }
