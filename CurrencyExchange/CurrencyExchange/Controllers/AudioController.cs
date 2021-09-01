@@ -64,6 +64,7 @@ namespace CurrencyExchange.Controllers
                     Console.WriteLine("{0} bytesRead", bytesRead);
                     total += bytesRead;
                     return buffer;
+
                 }
 
             }
